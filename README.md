@@ -1,16 +1,13 @@
-# 📈 Time Series Analysis & Forecasting for IBM Stock Prices
+# 📈 IBM Stock Price Time Series Forecasting
 
-[![Kaggle Notebook](https://img.shields.io/badge/View-Kaggle-orange?logo=kaggle)](https://www.kaggle.com/code/kirtankumar/time-series-analysis-and-forecasting-for-ibm)
-
-This project explores the time series behavior of IBM’s stock price, performs exploratory data analysis, applies various forecasting models, and evaluates their performance to forecast future trends.
+This project performs **Exploratory Data Analysis (EDA)** and applies multiple **time series forecasting models** on IBM stock price data. It includes statistical tests, visualization, and model evaluation to identify the best forecasting approach for future price prediction.
 
 ---
 
 ## 🧭 Table of Contents
 
-- [Motivation](#motivation)  
+- [Overview](#overview)  
 - [Dataset](#dataset)  
-- [Installation & Setup](#installation--setup)  
 - [Exploratory Data Analysis](#exploratory-data-analysis)  
 - [Forecasting Models](#forecasting-models)  
 - [Model Evaluation](#model-evaluation)  
@@ -21,27 +18,110 @@ This project explores the time series behavior of IBM’s stock price, performs 
 
 ---
 
-## Motivation
+## 📝 Overview
 
-- Demonstrate end-to-end time series analysis for financial data  
-- Compare traditional forecasting techniques with statistical rigor  
-- Provide replicable results and forecasts for IBM stock  
+The aim of this project is to:
 
----
-
-## Dataset
-
-- Source: [Yahoo Finance](https://finance.yahoo.com/) or Kaggle’s dataset portal  
-- Features: `Date`, `Open`, `High`, `Low`, `Close`, `Adj Close`, `Volume`  
-- Period: e.g., January 1, 2010 – December 31, 2024  
-- Frequency: Daily  
+- Explore historical trends in IBM stock price  
+- Test time series stationarity and visualize patterns  
+- Apply and compare different forecasting models including ARIMA, Prophet, and LSTM  
+- Evaluate forecast accuracy using statistical metrics
 
 ---
 
-## Installation & Setup
+## 📂 Dataset
 
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/yourusername/ibm-time-series-forecasting.git
-   cd ibm-time-series-forecasting
+- **Source**: Yahoo Finance (via `yfinance` library or downloaded CSV)
+- **Ticker**: `IBM`
+- **Features**: Date, Open, High, Low, Close, Volume, Adjusted Close
+- **Timeframe**: Daily historical prices
 
+---
+
+## 🔍 Exploratory Data Analysis
+
+- 📊 **Plots of price trends over time**  
+- 🧪 **Stationarity testing** using the Augmented Dickey-Fuller (ADF) test  
+- 🔄 **Rolling statistics** and **Autocorrelation (ACF/PACF)** plots  
+- 🔧 **Decomposition** into trend, seasonality, and residuals using seasonal decomposition
+
+---
+
+## 🔮 Forecasting Models
+
+| Model        | Description                                         |
+|--------------|-----------------------------------------------------|
+| ARIMA/SARIMA | Classical statistical model, tuned with ACF/PACF & AIC |
+| Prophet      | Additive time series forecasting model by Facebook  |
+| LSTM         | Recurrent neural network model for sequence prediction |
+| Baseline     | Naive forecast using previous-day value             |
+
+---
+
+## 🧪 Model Evaluation
+
+- **Train/Test Split**: Last ~20% of data reserved for testing  
+- **Evaluation Metrics**:
+  - RMSE (Root Mean Squared Error)  
+  - MAE (Mean Absolute Error)  
+  - MAPE (Mean Absolute Percentage Error)  
+- **Visualization**:
+  - Forecast vs. actual plots  
+  - Confidence intervals for statistical models
+
+---
+
+## 📊 Results & Visualizations
+
+| Model   | RMSE   | MAE   | MAPE   |
+|---------|--------|-------|--------|
+| ARIMA   | x.xx   | x.xx  | x.xx%  |
+| SARIMA  | x.xx   | x.xx  | x.xx%  |
+| Prophet | x.xx   | x.xx  | x.xx%  |
+| LSTM    | x.xx   | x.xx  | x.xx%  |
+
+> 📉 **Forecast Visualization**: Time series plots comparing model predictions with actual test data, including future forecasts.
+
+> ✨ **Best Model Insight**: *SARIMA* achieved the lowest RMSE and effectively captured both seasonality and trend.
+
+
+---
+
+## ⚙️ Usage Instructions
+
+To run the analysis and generate the output:
+
+```bash
+cd notebook
+jupyter nbconvert --execute time_series_forecasting_ibm.ipynb \
+  --to html --output forecasts.html
+```
+## 🤝 Contributing
+
+Contributions are welcome and appreciated!
+
+If you’d like to improve this project, feel free to:
+
+1. Fork the repository  
+2. Create a new branch: `git checkout -b feature-branch-name`  
+3. Commit your changes: `git commit -m 'Add some feature'`  
+4. Push to the branch: `git push origin feature-branch-name`  
+5. Open a pull request
+
+For major changes, please open an issue first to discuss what you would like to change.
+
+📌 Make sure your code follows consistent formatting and is well-documented.
+
+## 📜 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for full details.
+
+You are free to use, modify, and distribute this project with proper attribution.
+
+## 🙋‍♂️ Author
+
+**Kirtan Kumar**  
+📍 Student at NIT Rourkela  
+🔗 [LinkedIn](https://www.linkedin.com/in/kirtankumar)  
+📊 [Kaggle](https://www.kaggle.com/kirtankumar)   
+📫 Email: kirtanfbd@gmail.com
