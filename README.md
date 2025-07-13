@@ -75,15 +75,8 @@ The aim of this project is to:
 
 | Model   | RMSE   | MAE   | MAPE   |
 |---------|--------|-------|--------|
-| ARIMA   | x.xx   | x.xx  | x.xx%  |
-| SARIMA  | x.xx   | x.xx  | x.xx%  |
-| Prophet | x.xx   | x.xx  | x.xx%  |
-| LSTM    | x.xx   | x.xx  | x.xx%  |
-
+| ARIMA   | 0.104  |0.088  | 1.75%  |
 > 📉 **Forecast Visualization**: Time series plots comparing model predictions with actual test data, including future forecasts.
-
-> ✨ **Best Model Insight**: *SARIMA* achieved the lowest RMSE and effectively captured both seasonality and trend.
-
 
 ---
 
