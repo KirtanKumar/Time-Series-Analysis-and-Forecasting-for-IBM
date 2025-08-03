@@ -89,6 +89,14 @@ cd notebook
 jupyter nbconvert --execute time_series_forecasting_ibm.ipynb \
   --to html --output forecasts.html
 ```
+## 🌐 View the Notebook on Kaggle
+
+You can explore the full notebook and code on Kaggle:
+
+🔗 [View on Kaggle](https://www.kaggle.com/code/kirtankumar/time-series-analysis-and-forecasting-for-ibm)
+
+Feel free to upvote, comment, or suggest improvements!
+
 ## 🤝 Contributing
 
 Contributions are welcome and appreciated!
